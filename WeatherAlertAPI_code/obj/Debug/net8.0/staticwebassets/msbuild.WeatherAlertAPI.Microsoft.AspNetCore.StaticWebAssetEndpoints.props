@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/WeatherAlertAPI/css/site.clc72a4ihl.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"clc72a4ihl"},{"Name":"integrity","Value":"sha256-gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10="},{"Name":"label","Value":"_content/WeatherAlertAPI/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1521"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 12:21:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WeatherAlertAPI/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1521"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 12:21:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WeatherAlertAPI/js/site.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1422"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 12:21:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/WeatherAlertAPI/js/site.nfwpuvsl29.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nfwpuvsl29"},{"Name":"integrity","Value":"sha256-jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ="},{"Name":"label","Value":"_content/WeatherAlertAPI/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1422"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 08 Jun 2025 12:21:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

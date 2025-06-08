@@ -1,0 +1,83 @@
+@page
+@model WeatherAlertAPI.Pages.CitiesModel
+@{
+    ViewData["Title"] = "Cidades";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>
+        <i class="fas fa-city me-2 text-primary"></i>
+        Cidades Monitoradas
+    </h2>
+</div>
+
+<div class="row">
+    @if (Model.Cities != null && Model.Cities.Any())
+    {
+        @foreach (var city in Model.Cities)
+        {
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>
+                            @city.Nome
+                        </h5>
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-globe me-1"></i>
+                                Coordenadas:
+                            </small>
+                            <br>
+                            <span class="badge bg-light text-dark">
+                                Lat: @city.Latitude?.ToString("F4")
+                            </span>
+                            <span class="badge bg-light text-dark">
+                                Lng: @city.Longitude?.ToString("F4")
+                            </span>
+                        </div>
+                        <div class="d-grid">
+                            <form method="post" asp-page="/Weather">
+                                <input type="hidden" name="SelectedCityId" value="@city.Id" />
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-thermometer-half me-2"></i>
+                                    Ver Previsão
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-12">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Nenhuma cidade encontrada no sistema.
+            </div>
+        </div>
+    }
+</div>
+
+<div class="mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">
+                <i class="fas fa-info-circle me-2"></i>
+                Sobre as Cidades Monitoradas
+            </h5>
+            <p class="card-text">
+                O sistema monitora as principais cidades brasileiras, coletando dados meteorológicos 
+                em tempo real para fornecer alertas precisos de calor extremo.
+            </p>
+            <p class="card-text mb-0">
+                <small class="text-muted">
+                    Dados fornecidos pela API Open-Meteo com atualização contínua.
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+

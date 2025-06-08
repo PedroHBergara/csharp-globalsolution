@@ -1,0 +1,88 @@
+@page
+@model WeatherAlertAPI.Pages.IndexModel
+@{
+    ViewData["Title"] = "Início";
+}
+
+<div class="hero-section bg-primary text-white rounded p-5 mb-4">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="display-4 fw-bold">
+                <i class="fas fa-shield-alt me-3"></i>
+                Weather Alert API
+            </h1>
+            <p class="lead">
+                Sistema inteligente de alertas de calor extremo com dicas preventivas personalizadas
+            </p>
+            <p class="mb-4">
+                Monitore a previsão do tempo em tempo real e receba orientações específicas 
+                para se proteger durante períodos de alta temperatura.
+            </p>
+            <a asp-page="/Weather" class="btn btn-light btn-lg">
+                <i class="fas fa-thermometer-three-quarters me-2"></i>
+                Ver Previsão do Tempo
+            </a>
+        </div>
+        <div class="col-md-4 text-center">
+            <i class="fas fa-sun display-1 text-warning"></i>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-thermometer-half fa-3x text-danger mb-3"></i>
+                <h5 class="card-title">Detecção de Calor Extremo</h5>
+                <p class="card-text">
+                    Algoritmo inteligente que analisa a previsão de temperatura e 
+                    identifica automaticamente dias com risco de calor extremo.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i>
+                <h5 class="card-title">Dicas Preventivas</h5>
+                <p class="card-text">
+                    Receba orientações personalizadas baseadas no nível de risco: 
+                    hidratação, proteção solar, atividades recomendadas e cuidados especiais.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-map-marker-alt fa-3x text-success mb-3"></i>
+                <h5 class="card-title">Múltiplas Cidades</h5>
+                <p class="card-text">
+                    Monitore a previsão do tempo em diversas cidades brasileiras 
+                    com dados precisos e atualizados da API Open-Meteo.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-info mt-4">
+    <h5 class="alert-heading">
+        <i class="fas fa-info-circle me-2"></i>
+        Como funciona?
+    </h5>
+    <p class="mb-2">
+        <strong>1. Coleta de Dados:</strong> Obtemos dados meteorológicos em tempo real da API Open-Meteo
+    </p>
+    <p class="mb-2">
+        <strong>2. Análise de Risco:</strong> Nosso algoritmo classifica cada dia em três níveis: Normal, Alerta ou Risco
+    </p>
+    <p class="mb-0">
+        <strong>3. Dicas Personalizadas:</strong> Exibimos orientações específicas para cada nível de risco detectado
+    </p>
+</div>
+

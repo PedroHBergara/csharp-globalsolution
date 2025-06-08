@@ -1,0 +1,91 @@
+/* Estilos personalizados para Weather Alert API */
+
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.temperature-display {
+    text-align: center;
+}
+
+.temp-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.25rem 0;
+}
+
+.tips-section {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-top: 1rem;
+}
+
+.tips-section ul li {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+}
+
+/* Responsividade para cards de previsão */
+@media (max-width: 768px) {
+    .temp-value {
+        font-size: 1.25rem;
+    }
+    
+    .tips-section ul li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Animações para alertas */
+.border-danger {
+    animation: pulse-danger 2s infinite;
+}
+
+@keyframes pulse-danger {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+/* Melhorias visuais para badges */
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-success {
+    background-color: #198754 !important;
+}
+

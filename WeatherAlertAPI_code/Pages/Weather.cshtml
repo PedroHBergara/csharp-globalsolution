@@ -1,0 +1,164 @@
+@page
+@model WeatherAlertAPI.Pages.WeatherModel
+@{
+    ViewData["Title"] = "Previsão do Tempo";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>
+        <i class="fas fa-cloud-sun me-2 text-primary"></i>
+        Previsão do Tempo e Alertas
+    </h2>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <form method="post" class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-search me-2"></i>
+                    Selecionar Cidade
+                </h5>
+                <div class="mb-3">
+                    <label asp-for="SelectedCityId" class="form-label">Cidade:</label>
+                    <select asp-for="SelectedCityId" class="form-select" asp-items="Model.CityOptions">
+                        <option value="">Selecione uma cidade...</option>
+                    </select>
+                    <span asp-validation-for="SelectedCityId" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sync-alt me-2"></i>
+                    Buscar Previsão
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    @if (Model.WeatherResponse != null)
+    {
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        @Model.WeatherResponse.City.Nome
+                    </h5>
+                    <div class="d-flex align-items-center">
+                        @if (Model.WeatherResponse.HasExtremeHeatRisk)
+                        {
+                            <span class="badge bg-danger fs-6 me-2">
+                                <i class="fas fa-exclamation-triangle me-1"></i>
+                                ALERTA DE CALOR EXTREMO
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success fs-6 me-2">
+                                <i class="fas fa-check-circle me-1"></i>
+                                SEM RISCO EXTREMO
+                            </span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Esta é a div que estava faltando -->
+
+        @if (Model.WeatherResponse.Forecasts != null && Model.WeatherResponse.Forecasts.Any())
+        {
+            <div class="row mt-4">
+                @foreach (var forecast in Model.WeatherResponse.Forecasts)
+                {
+                    <div class="col-lg-6 col-xl-4 mb-4">
+                        <div class="card h-100 shadow-sm @GetCardClass(forecast.RiskLevel)">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0">
+                                    <i class="fas fa-calendar-day me-2"></i>
+                                    @forecast.Date.ToString("dd/MM/yyyy")
+                                </h6>
+                                <span class="badge @GetBadgeClass(forecast.RiskLevel)">
+                                    @GetRiskLevelText(forecast.RiskLevel)
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row text-center mb-3">
+                                    <div class="col-6">
+                                        <div class="temperature-display">
+                                            <i class="fas fa-thermometer-full text-danger"></i>
+                                            <div class="temp-value">@forecast.TemperatureMax.ToString("F1")°C</div>
+                                            <small class="text-muted">Máxima</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="temperature-display">
+                                            <i class="fas fa-thermometer-empty text-primary"></i>
+                                            <div class="temp-value">@forecast.TemperatureMin.ToString("F1")°C</div>
+                                            <small class="text-muted">Mínima</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                @if (forecast.Tips != null && forecast.Tips.Any())
+                                {
+                                    <div class="tips-section">
+                                        <h6 class="text-muted mb-2">
+                                            <i class="fas fa-lightbulb me-1"></i>
+                                            Dicas Preventivas:
+                                        </h6>
+                                        <ul class="list-unstyled mb-0">
+                                            @foreach (var tip in forecast.Tips)
+                                            {
+                                                <li class="mb-1">
+                                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                                    <small>@tip</small>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else if (Model.SelectedCityId.HasValue)
+        {
+            <div class="alert alert-warning mt-4">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                Não foi possível obter a previsão do tempo para a cidade selecionada. Tente novamente.
+            </div>
+        }
+    }
+</div>
+
+@functions {
+    private string GetCardClass(string? riskLevel)
+    {
+        return riskLevel switch
+        {
+            "risco" => "border-danger",
+            "alerta" => "border-warning",
+            _ => "border-success"
+        };
+    }
+    
+    private string GetBadgeClass(string? riskLevel)
+    {
+        return riskLevel switch
+        {
+            "risco" => "bg-danger",
+            "alerta" => "bg-warning text-dark",
+            _ => "bg-success"
+        };
+    }
+    
+    private string GetRiskLevelText(string? riskLevel)
+    {
+        return riskLevel switch
+        {
+            "risco" => "RISCO",
+            "alerta" => "ALERTA",
+            _ => "NORMAL"
+        };
+    }
+}

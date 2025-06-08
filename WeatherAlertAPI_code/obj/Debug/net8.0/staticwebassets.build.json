@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "GBHe6x15+upRQOpvS7v/fs0demReiPwYMcIgzUOha08=",
+  "Source": "WeatherAlertAPI",
+  "BasePath": "_content/WeatherAlertAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WeatherAlertAPI\\wwwroot",
+      "Source": "WeatherAlertAPI",
+      "ContentRoot": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\",
+      "BasePath": "_content/WeatherAlertAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\css\\site.css",
+      "SourceId": "WeatherAlertAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\",
+      "BasePath": "_content/WeatherAlertAPI",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "clc72a4ihl",
+      "Integrity": "gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\js\\site.js",
+      "SourceId": "WeatherAlertAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\",
+      "BasePath": "_content/WeatherAlertAPI",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nfwpuvsl29",
+      "Integrity": "jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.clc72a4ihl.css",
+      "AssetFile": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1521"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 12:21:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "clc72a4ihl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1521"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 12:21:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gFq7jKWYBQiVG9lcbndM/1FjnMpKMBAWpL2UorSQn10="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1422"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 12:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.nfwpuvsl29.js",
+      "AssetFile": "C:\\Users\\pedro\\Documents\\WeatherAlertAPI_code\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1422"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 08 Jun 2025 12:21:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nfwpuvsl29"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jdUrlwjafPCXapRUefH8gGrlczzfBvR7loAW4ioURxQ="
+        }
+      ]
+    }
+  ]
+}
